@@ -8,12 +8,15 @@ htnl {
     /* Variaveis */
     --bg-color: whitesmoke;
     --text-color: #00082f;
+    --primary-color: #7e21e9;
 }
 
 body {
     background-color: var(--bg-color);
     font-family: 'Roboto', sans-serif;
-    color: var(--text-color);
+    background-image: url(../image/fundo_bio_claro.jpg);
+    background-repeat: unset;
+    background-position: 0px -180px;
 }
 
 .container {
@@ -68,6 +71,12 @@ ul li a {
 ul li a:hover {
     background-color: #7e21e9;
     opacity: 0.8;
+}
+
+ul li a svg.icons {
+    width: 22px;
+    height: 22px;
+    padding: 4px;
 }
 
 h1 {

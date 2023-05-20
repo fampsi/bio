@@ -39,7 +39,7 @@ img.avatar {
     border-radius: 50%;
     width: 120px;
     height: 120px;
-    border: 4px solid #7e21e9;
+    border: 4px solid #a420bc;
     padding: 4px;
 }
 
@@ -54,7 +54,7 @@ ul li a {
     align-items: center;
     justify-content: center;
 
-    background-color: #7e21e9;
+    background-color: #a420bc;
     color: white;
 
     margin-bottom: 16px;
@@ -69,7 +69,7 @@ ul li a {
 
 /* pseudoo-class */
 ul li a:hover {
-    background-color: #7e21e9;
+    background-color: #a420bc;
     opacity: 0.8;
 }
 

@@ -181,14 +181,13 @@ button, .btn {
     align-items: center;
 }
 
-.rodape {
+p.rodape {
     font-weight: 500;
     font-size: 12px;
     opacity: 0.5;
     text-align: center;
     position: relative;
     top: -80px;
-    
 }
 
     

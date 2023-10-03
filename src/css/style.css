@@ -185,6 +185,9 @@ button, .btn {
     font-weight: 500;
     font-size: 12px;
     opacity: 0.6;
+    text-align: center;
+    position: relative;
+    top: -80px;
 }
 
     

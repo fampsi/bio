@@ -181,15 +181,20 @@ button, .btn {
     align-items: center;
 }
 
-p.rodape {
+footer .rodape {
     font-weight: 500;
     font-size: 12px;
-    opacity: 0.5;
+    opacity: 0.6;
     text-align: center;
     position: relative;
     top: -80px;
+    display: block;
 }
 
+footer .rodape:hover {
+    opacity: 0.4;
+    transition: var(--transition);
+}
     
 
 

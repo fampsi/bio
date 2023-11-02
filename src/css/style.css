@@ -71,7 +71,7 @@ a {
 
 
 /** conteudo */
-.bio-content {
+.bio-content, .contact-content {
     background: var(--light-color);
 }
 
@@ -195,7 +195,63 @@ footer .rodape:hover {
     opacity: 0.4;
     transition: var(--transition);
 }
-    
 
+/** Contact */
+.contact-content {
+    padding: 4rem 1rem 0 1rem;
+    text-align: center;
+}
+
+.contact-content ul {
+    padding: 2rem 1rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-content ul li, .contact-content ul li a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: .2rem 0rem;
+}
+
+.svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 1rem;
+}
+
+.form-area {
+    padding: 2rem 1rem 4rem 1rem;
+    width: 100%;
+}
+
+.form-area .form-section {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 1rem 0;
+}
+
+.form-area .form-section label {
+    font-weight: 500;
+    margin-bottom: .5rem;
+}
+    
+.input, .textarea {
+    width: 100%;
+    height: 4.4rem;
+    border: 1px solid var(--dark-gray);
+    border-radius: 1rem;
+    padding: 0 1rem;
+    margin-bottom: .25rem;
+    font-size: 1.6rem;
+    transition: var(--transition);
+}
+
+.textarea {
+    height: 10rem;
+}
 
 

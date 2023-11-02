@@ -141,7 +141,7 @@ a {
     top: -80px;
 }
 
-button, .btn {
+button, .btn, .btn-contact {
     cursor: pointer;
     border: none;
     background: var(--light-gray);
@@ -157,7 +157,8 @@ button, .btn {
     align-items: center;
 }
 
-.btn:hover {
+.btn:hover,
+.btn-contact:hover {
     background: var(--dark-gray);
     transition: var(--transition);
 }
@@ -252,6 +253,22 @@ footer .rodape:hover {
 
 .textarea {
     height: 10rem;
+}
+
+.btn-contact {
+    width: 100%;
+    height: 4.4rem;
+    margin: 0;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #facc15;
+}
+
+.btn-contact:hover {
+    background: var(--dark-gray);
+    transition: var(--transition);
+    color: var(--light-color);
 }
 
 

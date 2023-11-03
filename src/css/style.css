@@ -249,6 +249,7 @@ footer .rodape:hover {
     margin-bottom: .25rem;
     font-size: 1.6rem;
     transition: var(--transition);
+    font-family: sans-serif;
 }
 
 .form-area .form-section a {
@@ -271,6 +272,7 @@ footer .rodape:hover {
 
 .textarea {
     height: 10rem;
+    padding: 1rem 1rem;
 }
 
 .btn-contact {

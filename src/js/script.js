@@ -14,18 +14,18 @@ form.addEventListener('submit', (e) => {
     const email = emailInput.value;
     const message = messageTextArea.value;
 
-    if (name === "" || name.length < 3) {
-        alert('Por favor, preencha todos os campos!');
+    if (name === "" || !validateName(name)) {
+        alert('Por favor, preencha campo nome corretamente!');
         return;
     }
 
     if (email === "" || !validateEmail(email)) {
-        alert('Por favor, preencha todos os campos!');
+        alert('Por favor, preencha campo email corretamente!');
         return;
     }
 
     if (message === "" || message.length < 3) {
-        alert('Por favor, preencha todos os campos!');
+        alert('Por favor, preencha campo messagem corretamente!');
         return;
     }
 
@@ -37,10 +37,22 @@ form.addEventListener('submit', (e) => {
 // função que valida email
 function validateEmail(email) {
     const emailRegex = new RegExp(
-        /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-=Z]{2,}$/
+        /\S+@\S+\.\S+/
     );
 
     if (emailRegex.test(email)) {
+        return true;
+    }
+
+    return  false;
+}
+
+function validateName(name) {
+    const nameRegex = new RegExp(
+        /^[a-zA-Z]{3,}$/
+    );
+
+    if (nameRegex.test(name)) {
         return true;
     }
 

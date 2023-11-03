@@ -263,6 +263,7 @@ footer .rodape:hover {
     text-transform: uppercase;
     font-weight: bold;
     background-color: #facc15;
+    cursor: pointer;
 }
 
 .btn-contact:hover {

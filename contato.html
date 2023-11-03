@@ -12,16 +12,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bio instagram Fampsi</title>
-    <meta name="description" content=" bio instagram Fampsi Psicoterapia" />
+    <meta name="description" content=" link da bio do instagram fampsi psicoterapia" />
     <meta name="description" content="Ajudamos pessoas a agir com mais equilíbrio" />
-    <meta property="og:title" content="bio instagram Fampsi Psicoterapia" />
+    <meta property="og:title" content="link da bio do bio instagram fampsi psicoterapia" />
     <meta property="og:description" content="Ajudamos pessoas a agir com mais equilíbrio" />
     <meta property="og:url" content="https://fampsi.github.io/bio/" />
     <meta property="og:type" content="bio instagram" />'
     <link rel="icon" href="src/image/FamPsiLogo.ico" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="src/css/style.css">
-   
+    <script src="src/js/script.js" defer></script>
 </head>
 <body>
    <!-- Google Tag Manager (noscript) -->
@@ -130,9 +130,10 @@
                     <div class="form-area">
                         <form class="">
                             <div class="form-section">
-                                <label htmlFor="" class="">Nome:</label>
+                                <label for="name" class="">Nome:</label>
                                 <input
-                                    name="from_name" 
+                                    id="name"
+                                    name="name" 
                                     type="text"
                                     class="input"
                                     placeholder="Seu nome..." 
@@ -140,19 +141,22 @@
                             </div>
     
                             <div class="form-section">
-                                <label htmlFor="" class="">E-mail:</label>
-                                <input 
-                                name="email"
-                                type="text"
-                                class="input" 
-                                placeholder="Seu e-mail..."
+                                <label for="email" class="">E-mail:</label>
+                                <input
+                                    id="email" 
+                                    name="email"
+                                    type="email"
+                                    class="input" 
+                                    placeholder="Seu e-mail..."
                                 />
                             </div>
     
                             <div class="form-section">
-                                <label htmlFor="" class="">Mensagem:</label>
+                                <label for="message" class="">Mensagem:</label>
                                 <textarea
-                                    name="message" 
+                                    id="message"
+                                    name="message"
+                                    type="text" 
                                     rows="4"
                                     class="textarea" 
                                     placeholder="Digite aqui a sua dúvida..."

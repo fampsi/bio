@@ -37,7 +37,7 @@ form.addEventListener('submit', (e) => {
 // função que valida email
 function validateEmail(email) {
     const emailRegex = new RegExp(
-        /\S+@\S+\.\S+/
+        /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     );
 
     if (emailRegex.test(email)) {

@@ -14,23 +14,92 @@ form.addEventListener('submit', (e) => {
     const email = emailInput.value;
     const message = messageTextArea.value;
 
-    if (name === "" || !validateName(name)) {
-        alert('Por favor, preencha campo nome corretamente!');
+    if (name === "") {
+        errorInput(nameInput, "O campo nome é obrigatório!");
         return;
     }
+    else {
+        const formItem = nameInput.parentElement;
 
-    if (email === "" || !validateEmail(email)) {
-        alert('Por favor, preencha campo email corretamente!');
-        return;
+        const textMessage = formItem.querySelector("a");
+
+        textMessage.innerText = "";
+   
+        formItem.className = "form-section";
     }
 
-    if (message === "" || message.length < 3) {
-        alert('Por favor, preencha campo messagem corretamente!');
+    if( name.length < 3 || !validateName(name) ) {
+        errorInput(nameInput, "Por favor, preencha campo nome corretamente!");
         return;
+    }
+    else {
+        const formItem = nameInput.parentElement;
+
+        const textMessage = formItem.querySelector("a");
+
+        textMessage.innerText = "";
+   
+        formItem.className = "form-section";
+    }
+
+    if(email === "") { 
+        errorInput(emailInput, "O campo email é obrigatório!");
+        return;
+    }
+    else {
+        const formItem = emailInput.parentElement;
+
+        const textMessage = formItem.querySelector("a");
+
+        textMessage.innerText = "";
+   
+        formItem.className = "form-section";
+    }
+
+    if ( !validateEmail(email) ) {
+        errorInput(emailInput, "Por favor, preencha campo email corretamente!");
+        return;
+    }
+    else {
+        const formItem = emailInput.parentElement;
+
+        const textMessage = formItem.querySelector("a");
+
+        textMessage.innerText = "";
+   
+        formItem.className = "form-section";
+    }
+
+    if (message === "") {
+        errorTextArea(messageTextArea, "O campo messagem é obrigatório!");
+        return;
+    }
+    else {
+        const formItem = messageTextArea.parentElement;
+
+        const textMessage = formItem.querySelector("a");
+
+        textMessage.innerText = "";
+   
+        formItem.className = "form-section";
+    }
+
+    if ( message.length < 3) {
+        errorTextArea(messageTextArea, "Por favor, preencha campo messagem corretamente!");
+        return;
+    }
+    else {
+        const formItem = messageTextArea.parentElement;
+
+        const textMessage = formItem.querySelector("a");
+
+        textMessage.innerText = "";
+   
+        formItem.className = "form-section";
     }
 
     // Se todos os campos estiverem preenchidos
-    form.submit();
+    /* form.submit(); */
     
 });
 
@@ -49,7 +118,7 @@ function validateEmail(email) {
 
 function validateName(name) {
     const nameRegex = new RegExp(
-        /^[a-zA-Z]{3,}$/
+        /^[a-zA-Z ]{3,}$/
     );
 
     if (nameRegex.test(name)) {
@@ -57,4 +126,26 @@ function validateName(name) {
     }
 
     return  false;
+}
+
+function errorInput(input, message) {
+    const formItem = input.parentElement;
+
+    const textMessage = formItem.querySelector("a");
+
+    textMessage.innerText = message;
+   
+    formItem.className = "form-section error";
+}
+
+function errorTextArea(textarea, message) {
+    console.log(textarea);
+
+    const formItem = textarea.parentElement;
+
+    const textMessage = formItem.querySelector("a");
+
+    textMessage.innerText = message;
+   
+    formItem.className = "form-section error";
 }

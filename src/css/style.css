@@ -232,7 +232,7 @@ footer .rodape:hover {
     display: flex;
     flex-direction: column;
     text-align: left;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
 }
 
 .form-area .form-section label {
@@ -249,6 +249,24 @@ footer .rodape:hover {
     margin-bottom: .25rem;
     font-size: 1.6rem;
     transition: var(--transition);
+}
+
+.form-area .form-section a {
+    visibility: hidden;
+    font-size: 1.4rem;
+}
+
+.form-area .error input {
+    border-color: #ff3b25;
+}
+
+.form-area .error textarea {
+    border-color: #ff3b25;
+}
+
+.form-area .error a {
+    color: #ff3b25;
+    visibility: visible;
 }
 
 .textarea {

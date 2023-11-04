@@ -25,10 +25,10 @@ form.addEventListener('submit', (e) => {
     });
 
     if (isValid) {
+        sendEnail();
         alert("Formulário enviado com sucesso!");
         // Se todos os campos estiverem preenchidos
-        sendEnail();
-        form.submit();
+       /*  form.submit(); */
     }
     
 });
@@ -206,18 +206,19 @@ function sendEnail() {
     })();
 
     var params = {
-        from_name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        message: document.getElementById("message").value
+        from_name: nameInput.value,
+        email: emailInput.value,
+        message: messageTextArea.value
     }
 
     var service_id = "service_iirl1kr";
     var template_id = "template_v651crh";
 
-    emailjs.sendForm(service_id, template_id, params)
-    .then(function() {
+    emailjs.send(service_id, template_id, params)
+    .then(res => {
         console.log('SUCCESS!');
-    }, function(error) {
+    })
+    .catch(error => {
         console.log('FAILED...', error);
     });
 }

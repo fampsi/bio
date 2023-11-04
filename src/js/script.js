@@ -28,7 +28,7 @@ form.addEventListener('submit', (e) => {
         sendEnail();
         alert("Formulário enviado com sucesso!");
         // Se todos os campos estiverem preenchidos
-       /*  form.submit(); */
+        form.submit();
     }
     
 });
@@ -162,6 +162,8 @@ function validateEmail(email) {
 
     return  false;
 }
+
+
 
 function validateName(name) {
     const nameRegex = new RegExp(

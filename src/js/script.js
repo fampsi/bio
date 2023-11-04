@@ -27,6 +27,7 @@ form.addEventListener('submit', (e) => {
     if (isValid) {
         alert("Formulário enviado com sucesso!");
         // Se todos os campos estiverem preenchidos
+        sendEnail();
         form.submit();
     }
     
@@ -196,4 +197,27 @@ function errorTextArea(textarea, message) {
     textMessage.innerText = message;
    
     formItem.className = "form-section error";
+}
+
+
+function sendEnail() {
+    (function(){
+        emailjs.init("w8FICXP1OUNY-GUlE");
+    })();
+
+    var params = {
+        from_name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value
+    }
+
+    var service_id = "service_iirl1kr";
+    var template_id = "template_v651crh";
+
+    emailjs.sendForm(service_id, template_id, params)
+    .then(function() {
+        console.log('SUCCESS!');
+    }, function(error) {
+        console.log('FAILED...', error);
+    });
 }

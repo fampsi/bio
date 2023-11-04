@@ -76,7 +76,7 @@ a {
 }
 
 .bio-image {
-    height: 11rem;
+    height: 12rem;
     width: 38rem;
     background-position: center;
     background-repeat: no-repeat;
@@ -92,7 +92,7 @@ a {
     object-position: center;
     border: 6px solid var(--light-color);
     position: relative;
-    top: -100px;
+    top: -110px;
     background-color: #fff;
     transform: translateY(50%);
 }

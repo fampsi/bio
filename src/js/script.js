@@ -199,7 +199,7 @@ function errorTextArea(textarea, message) {
     formItem.className = "form-section error";
 }
 
-
+// funcao que envia email
 function sendEnail() {
     (function(){
         emailjs.init("w8FICXP1OUNY-GUlE");

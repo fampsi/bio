@@ -75,7 +75,8 @@ a {
     background: var(--light-color);
 }
 
-.bio-image {
+.bio-image, 
+.bio-image-contact {
     height: 12rem;
     width: 38rem;
     background-position: center;
@@ -83,7 +84,8 @@ a {
     background-size: cover;
 }
 
-.bio-logo {
+.bio-logo,
+.bio-logo-contact{
     width: 12rem;
     height: 12rem;
     margin: 0 auto;
@@ -199,7 +201,6 @@ footer .rodape:hover {
 
 /** Contact */
 .contact-content {
-    padding: 4rem 1rem 0 1rem;
     text-align: center;
 }
 
@@ -217,6 +218,14 @@ footer .rodape:hover {
     padding: .2rem 0rem;
 }
 
+.contact-content .area-text-contact{
+    margin-top: -4rem;
+}
+
+.contact-content .text-contact{
+    margin: 0rem 1rem;
+}
+
 .svg {
     width: 2.5rem;
     height: 2.5rem;
@@ -224,7 +233,7 @@ footer .rodape:hover {
 }
 
 .form-area {
-    padding: 2rem 1rem 4rem 1rem;
+    padding: 2rem 1.5rem 4rem 1.5rem;
     width: 100%;
 }
 
@@ -291,5 +300,6 @@ footer .rodape:hover {
     transition: var(--transition);
     color: var(--light-color);
 }
+
 
 

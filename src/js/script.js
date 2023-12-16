@@ -153,14 +153,14 @@ function  checkTextareaMessage(message) {
 // função que verifica email
 function validateEmail(email) {
     const emailRegex = new RegExp(
-        /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+        /^(\s?[^\s,]+@[^\s,]+\.[^\s,]+\s?,)*(\s?[^\s,]+@[^\s,]+\.[^\s,]+)$/
     );
 
     if (emailRegex.test(email)) {
         return true;
     }
 
-    return  false;
+    return false;
 }
 
 

@@ -101,7 +101,7 @@ function checkInputEmail(email) {
         formItem.className = "form-section";
     }
 
-    if ( !validateEmail(email) ) {
+    if (email.length < 6 || !validateEmail(email)) {
         errorInput(emailInput, "Por favor, preencha campo email corretamente!");
         return;
     }
